@@ -3,16 +3,20 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AlbumComponent } from './album/album.component';
+import { Album } from './album/album';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
+    Album,
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
